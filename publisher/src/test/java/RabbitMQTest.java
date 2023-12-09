@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.Timer;
 
@@ -31,4 +32,20 @@ public class RabbitMQTest {
             }
         }
     }
+
+    @Test
+    void testSendFanout(){
+        String exchangeName = "hmall.fanout";
+        String msg = "hello, everyone";
+        rabbitTemplate.convertAndSend(exchangeName, null, msg);
+    }
+
+    @Test
+    void testSendFirectOut(){
+        String exchangeName  = "hall.directout";
+        String msg = "hello, direct";
+        rabbitTemplate.convertAndSend(exchangeName, "red", msg);
+    }
+
+
 }

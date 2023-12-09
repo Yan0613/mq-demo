@@ -1,0 +1,13 @@
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+#spring:
+#  rabbitmq:
+#    host:
+#    port:
+#    virtual-host:
+#    username:
+#    password:
+
+

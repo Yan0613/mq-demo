@@ -5,7 +5,7 @@ logging:
 
 spring:
   rabbitmq:
-    host:
+    host: 127.0.0.1
     port:
     virtual-host:
     username:

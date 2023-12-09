@@ -12,4 +12,14 @@ public class MQlisener {
     public void lisenerSimpleQueue(String msg){
         System.out.println("消费者收到了simple.queue的消息"+ msg);
     }
+
+    @RabbitListener(queues = "work.queue")
+    public void lisenerWorkQueue(String msg){
+        System.out.println("消费者1收到了simple.queue的消息"+ msg);
+    }
+
+    @RabbitListener(queues = "work.queue")
+    public void lisenerWorkQueue2(String msg){
+        System.out.println("消费者2收到了simple.queue的消息"+ msg);
+    }
 }

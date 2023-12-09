@@ -6,10 +6,10 @@ logging:
 spring:
   rabbitmq:
     host: 127.0.0.1
-    port:
-    virtual-host:
-    username:
-    password:
+    port: 5672
+    virtual-host: /mirror
+    username: admin
+    password: admin
     listener:
       simple:
         prefetch: 1
